@@ -24,6 +24,7 @@ then
     clear
     echo "[OK] On continu !"
   else
+    clear
     exit
   fi
 fi
