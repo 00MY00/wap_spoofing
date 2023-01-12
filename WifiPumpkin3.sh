@@ -20,6 +20,7 @@ then
   echo "[1] Pour continée tous de même !"
   read -p ": " continu
   if [ $continu = "1" ];
+  then
     clear
     echo "[OK] On continu !"
   else
