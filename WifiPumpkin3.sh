@@ -33,6 +33,8 @@ dpkg --configure -a
 
 apt install libssl-dev libffi-dev build-essential -y
 
+[ ! -f "./wifipumpkin3" ]&& rm -rf ./wifipumpkin3
+
 git clone https://github.com/P0cL4bs/wifipumpkin3.git  
 cd ./wifipumpkin3/
 apt install python3-pyqt5
