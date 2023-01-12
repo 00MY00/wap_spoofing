@@ -17,8 +17,14 @@ then
   echo ""
   echo -e "\033[31m[ ERREUR ] \033[33m Le disk ne contien pas assée de place pour la mise à joure \033[00m"
   echo ""
-  sleep 6
-  exit
+  echo "[1] Pour continée tous de même !"
+  read -p ": " continu
+  if [ $continu != "1" ];
+    clear
+    echo "[OK] On continu !"
+  else
+    exit
+  fi
 fi
 
 dpkg --configure -a
