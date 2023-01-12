@@ -11,6 +11,16 @@ sleep 5
 
 apt update -y && apt upgrade -y
 
+if [ $? -eq 100 ];
+then
+  clear
+  echo ""
+  echo -e "\033[31m[ ERREUR ] \033[33m Le disk ne contien pas assée de place pour la mise à joure \033[00m"
+  echo ""
+  sleep 6
+  exit
+fi
+
 dpkg --configure -a
 
 apt install libssl-dev libffi-dev build-essential -y
